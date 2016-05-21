@@ -33,6 +33,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.webjars:bootstrap:3.3.6')
+	compile('org.webjars:angularjs:1.5.5')
+	compile('org.webjars:angularjs:1.5.5')
+	compile('org.webjars:font-awesome:4.6.2')
+	compile('org.webjars:animate.css:3.3.0')	
+	compile('org.webjars.bower:lightbox:2.7.1')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
@@ -42,4 +48,9 @@ eclipse {
 		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
 		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
 	}
+}
+
+task run(type:JavaExec) {
+   main = 'com.tenoch.WarrantySafeApplication'
+   classpath = sourceSets.main.runtimeClasspath
 }
